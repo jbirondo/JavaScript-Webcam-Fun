@@ -21,9 +21,14 @@ function paintToCanvas(){
     const height = video.videoHeight
     canvas.width = width
     canvas.height = height
-    setInterval(() => {
+    return setInterval(() => {
         ctx.drawImage(video, 0, 0, width, height)
     }, 16)
+}
+
+function takePhoto() {
+    snap.currenTime = 0
+    snap.play()
 }
 
 getVideo()
