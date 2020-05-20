@@ -11,6 +11,9 @@ function getVideo(){
             video.srcObject = localMediaStream
             video.play()
         })
+        .catch(error => {
+            console.error(error)
+        })
 }
 
 getVideo()
