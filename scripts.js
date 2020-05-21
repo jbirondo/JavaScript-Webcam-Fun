@@ -39,9 +39,9 @@ function takePhoto() {
 
 function redEffect(pixels){
     for(let i = 0; i < pixels.length; i+=4){
-        pixels.data[i] = pixels.data[i]
-        pixels.data[i + 1] = pixels.data[i + 1]
-        pixels.data[i + 2] = ixels.data[i + 2];
+        pixels.data[i] = pixels.data[i] + 100
+        pixels.data[i + 1] = pixels.data[i + 1] - 50
+        pixels.data[i + 2] = pixels.data[i + 2] * 0.5
     }
 }
 
