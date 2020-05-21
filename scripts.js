@@ -57,6 +57,22 @@ function rgbSplit(pixels) {
     return pixels;
 }
 
+function greenScreen(pixels){
+    const levels = {}
+    document.querySelectorAll('.rgb input').forEach((input) => {
+        levels[input.name] = input.value
+    })
+
+    for(let i = 0; i < pixels.data.length; i = i + 4){
+        let red = pixels.data[i]
+        let green = pixels.data[i + 1]
+        let blue = pixels.data[i + 2]
+        let alpha = pixels.data[i + 3];
+
+        
+    }
+}
+
 
 getVideo()
 
