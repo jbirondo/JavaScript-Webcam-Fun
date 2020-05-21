@@ -69,7 +69,14 @@ function greenScreen(pixels){
         let blue = pixels.data[i + 2]
         let alpha = pixels.data[i + 3];
 
-        
+        if(red >= levels.rmin
+            && green >= levels.gmin
+            && blue >= levels.bmin
+            && red <= levels.rmax
+            && green <= levels.gmax
+            && blue <= levels.bmax){
+                pixels.data[i + 3] = 0
+            }
     }
 }
 
