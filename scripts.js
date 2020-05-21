@@ -78,6 +78,7 @@ function greenScreen(pixels){
                 pixels.data[i + 3] = 0
             }
     }
+    return pixels
 }
 
 
