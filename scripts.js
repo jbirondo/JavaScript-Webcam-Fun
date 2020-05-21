@@ -23,6 +23,7 @@ function paintToCanvas(){
     canvas.height = height
     return setInterval(() => {
         ctx.drawImage(video, 0, 0, width, height)
+        const pixels = ctx.getImageData(0, 0, width, height)
     }, 16)
 }
 
@@ -34,6 +35,8 @@ function takePhoto() {
     link.innerHTML = `<img src="${data}" alt="Handsome Man" />`
     strip.insertBefore(link, strip.firstChild)
 }
+
+
 
 getVideo()
 
